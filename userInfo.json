@@ -1,0 +1,73 @@
+{
+    "users": {
+      "1": {
+        "id": "1",
+        "name": "Suzana Araya",
+        "username": "suzana",
+        "email": "suzanabelay10@gmail.com",
+        "address": {
+          "street": "Panatella Mews",
+          "suite": "15",
+          "city": "Calgary",
+          "zipcode": "T3k 6c7"
+        }
+      }
+    },
+    "income": {
+      "1": {
+        "id": "1",
+        "wages": 5000,
+        "secondary_income": 2000,
+        "interest": 400,
+        "support_payment": 600,
+        "others": 100
+      }
+    },
+    "expenses": {
+      "1": {
+        "savings": {
+          "RRSP": "1000",
+          "investment_savings": "6000",
+          "long_term_savings": "8000",
+          "bonds": "200"
+        },
+        "payment_obligations": {
+          "credit_card": "1000",
+          "loan": "100",
+          "vehicle_lease": "400",
+          "line_of_credit": "1000"
+        },
+        "insurance": {
+          "life_insurance": "400",
+          "health_insurance": "600",
+          "others": "300"
+        },
+        "housing": {
+          "rent": "1500",
+          "rent_insurance": "400",
+          "storage_and_parking": "100",
+          "utilities": "200",
+          "maintenance": "200"
+        },
+        "utilities": {
+          "phone": "100",
+          "internet": "100",
+          "water": "400",
+          "heat": "100",
+          "electricity": "200",
+          "cable": "200",
+          "others": "150"
+        },
+        "personal": {
+          "transportation": "200",
+          "clothing": "100",
+          "gifts": "40",
+          "personal_grooming": "100",
+          "dining_out": "300",
+          "hobbies": "200",
+          "others": "60"
+        }
+      }
+    }
+  }
+  
