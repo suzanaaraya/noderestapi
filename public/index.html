@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="slide-in"> REST API Documentation</h1>
+        <p class="description"> Welcome to REST API managing Users, Expenses, and Income data. Below
+            are the available endpoints and their respective methods.
+        </p>
+    </header>
+    <section>
+        <h2 class="slide-in">Users Endpoints</h2>
+        <ul>
+           <li><strong>GET /users</strong> -Retrieve all users. </li> 
+          <li><strong>GET /users/:id</strong> -Retrieve a single user by ID. </li>
+         <li><strong>POST /users</strong> -Create a new user. Requires user data in JSON format.  </li>
+        <li><strong>PUT /users/:id</strong> -Update an exiting user by ID. Requires Updated user data in JSON format. </li>
+        <li><strong>DELETE /users/:id</strong>- Delete user be ID.</li>
+
+        </ul>
+    </section>
+    <section>
+        <h2 class="slide-in">Expenses Endpoints</h2>
+        <ul>
+           <li><strong>GET /expenses</strong> -Retrieve all expenses. </li> 
+          <li><strong>GET /expenses/:id</strong> -Retrieve a single expense by ID. </li>
+         <li><strong>POST /expenses</strong> -Create a new expense. Requires expense data in JSON format.  </li>
+        <li><strong>PUT /expenses/:id</strong> -Update an exiting expense by ID. Requires Updated expense data in JSON format. </li>
+        <li><strong>DELETE /expenses/:id</strong>- Delete expense be ID.</li>
+
+        </ul>
+    </section>
+    <section>
+        <h2 class="slide-in">Income Endpoints</h2>
+        <ul>
+           <li><strong>GET /income</strong> -Retrieve all income records. </li> 
+          <li><strong>GET /income/:id</strong> -Retrieve a single income by ID. </li>
+         <li><strong>POST /income</strong> -Create a new income. Requires income data in JSON format.  </li>
+        <li><strong>PUT /income/:id</strong> -Update an exiting income by ID. Requires Updated income data in JSON format. </li>
+        <li><strong>DELETE /income/:id</strong>- Delete income be ID.</li>
+
+        </ul>
+    </section>
+    <footer>
+        <p>API developed by Suzana Araya. For more information and support ,
+            please constact me at <a href="mailto:suzanabelay10@gmail.com">suzanabelay10@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>

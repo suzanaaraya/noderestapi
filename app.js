@@ -2,11 +2,15 @@ const express = require('express'); // Import express
 const dotenv = require('dotenv'); // Import dotenv
 const app = express(); // Create an express app
 const bodyParser = require('body-parser'); // Import body-parser
-
+// configure dotenv
 dotenv.config();
+
+//serve static files from the public directory
+
+app.use(express.static('public'));
+
 //import Routes
 const userRoutes = require('./routes/usersRoutes'); // Import user routes
-
 const incomeRoutes = require('./routes/incomeRoutes'); // Import income routes% 
 const expenseRoutes = require('./routes/expensesRoutes'); // Import expense routes
 
@@ -16,7 +20,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded data
 app.use('/users', userRoutes); // Middleware for user routes
 app.use('/incomes', incomeRoutes); // Middleware for income routes
 app.use('/expenses', expenseRoutes); // Middleware for expense routes
+ 
 
+//setting the port
 const PORT = process.env.PORT || 3000;  // Set the port
 
 

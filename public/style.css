@@ -1,0 +1,67 @@
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+.slide-in {
+    animation: 10s ease-out 0s 1 slideInFromRight;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+    background-color: #1e1a1a;
+    color: #333; ;
+}
+.description {
+    text-align: center;
+    color: #030303;
+}
+
+header, section, footer {
+    background: rgb(104, 104, 104);
+    margin: 20px;
+    padding: 20px;
+    border-radius:15px;
+}
+
+h1 {
+
+    text-align: center;
+    color: #030a4b;
+
+}
+
+h2 {
+    color:#010918c9;
+} 
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color:#ddd;
+    margin: 8px 0;
+    padding:10px;
+    border-radius: 15px;
+}
+
+strong {
+    color: #d9534f;
+}
+
+footer {
+    text-align: center;
+    font-size: smaller;
+    color:#0d0c0c;
+}
