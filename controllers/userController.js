@@ -10,10 +10,14 @@ const userRef = db.ref('users'); // Reference to the 'users' node
 const getAllUsers = async (req, res) => {
     try {
       const snapshot = await userRef.once('value');
-      const users = snapshot.val();
+      let users = snapshot.val();
+      if (users && typeof users === 'object') {
+        users = Object.values(users);
+      }
+      console.log('Processed data:', users);
       res.status(200).json(users);
     } catch (error) {
-      res.status(500).json({ error: 'Something went wrong' });
+      res.status(500).json({ error: 'Something went wrong', details: error.message  });
     }
   };
 

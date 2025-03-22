@@ -9,10 +9,14 @@ const expenseRef = db.ref('expenses');// Reference to the 'expenses' node
 const getAllExpenses = async (req, res) => {
     try {
       const snapshot = await expenseRef.once('value');
-      const expenses = snapshot.val();
+      let expenses = snapshot.val();
+      if (expenses && typeof expenses === 'object') {
+        expenses = Object.values(expenses);
+      }
+      console.log('Processed expenses:', expenses);
       res.status(200).json(expenses);
     } catch (error) {
-      res.status(500).json({ error: 'Something went wrong' });
+      res.status(500).json({ error: 'Something went wrong',details: error.message });
     }
   };
 // getting a sigle expense entry by id

@@ -7,11 +7,15 @@ const incomeRef = db.ref('income');
 
 const getAllIncomes = async (req, res) => {
     try {
-      const snapshot = await incomeRef.once('value');
-      const income = snapshot.val();
-      res.status(200).json(income);
+        const snapshot = await incomeRef.once('value');
+        let income = snapshot.val();
+        if (income && typeof income === 'object') {
+            income = Object.values(income);
+        }
+        console.log('Processed income:', income);
+        res.status(200).json(income);
     } catch (error) {
-      res.status(500).json({ error: 'Something went wrong' });
+      res.status(500).json({ error: 'Something went wrong', details: error.message });
     }
   };
 
